@@ -1,0 +1,58 @@
+/* style.css
+ * This file provides css styles.
+ */
+
+body,html {
+	margin:0;
+	height:100%;
+	overflow:hidden;
+	background-color: #3b4b54; width : 100%;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #ffffff;
+}
+
+#interact {
+	padding:1em;
+	margin:1em;
+	position:relative;
+	z-index:10;
+	background-image: radial-gradient(circle, rgba(63,36,25,0.25) 5%, rgba(0,0,0,0.25) 95% );
+	color:#F1DDC1;
+	display:inline-block;
+}
+
+#displayImage img {
+	min-height:100%;
+	min-width:100%;
+	height:auto;
+	width:auto;
+	position:absolute;
+	top:-100%; bottom:-100%;
+	left:-100%; right:-100%;
+	margin:auto;
+	z-index:5;
+}
+/*#displayImage {
+	display:none;
+}*/
+
+a, span.linklike {
+	text-decoration: none;
+	color: #00aed1;
+}
+
+a:hover, span.linklike:hover {
+	text-decoration: underline;
+	cursor:pointer;
+}
+
+.newappIcon {
+	display: block;
+	margin: 0 auto;
+	max-width:200px;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 1.5em;
+}
