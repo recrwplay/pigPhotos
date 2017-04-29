@@ -11,14 +11,118 @@ body,html {
 	color: #ffffff;
 }
 
-#interact {
-	padding:1em;
-	margin:1em;
+#page-info, #options, #choose {
+	padding:0.25em;
+}
+
+#options div {
+	width:220px;
+}
+
+h1 {
+	margin:0.5em;
+	display: inline-block;
+}
+
+#rate.hidden {
+	display:none;
+}
+
+#album-choose {
+	/*margin-top:1em;*/
+}
+
+#options >div#photos-selected {
+	display: none;
+}
+
+span.album-title {
+	padding:.5em;
+	margin:.25em;
+	display: inline-block;
+	color: #F1DDC1;
+	border:1px solid #F1DDC1;
+	font-size:14px;
+}
+
+#choose span.selected, #rate, #page-info > span, #options .title-div {
+	background-color: rgba(0,0,0,0.25);
+}
+
+#page-info > span,
+#options > div,
+#choose > span {
 	position:relative;
 	z-index:10;
-	background-image: radial-gradient(circle, rgba(63,36,25,0.25) 5%, rgba(0,0,0,0.25) 95% );
-	color:#F1DDC1;
+	text-align: center;
 	display:inline-block;
+}
+
+/*#page-info-outer > div,
+#use-albums {
+		background:#F1DDC1;
+}*/
+
+#photo-info {
+	display: flex;
+	height:50px;
+	margin-left:1.5em;
+}
+
+#album-title {
+	margin:auto .5em;
+	padding;0 .5em;
+}
+
+#rate {
+	position:fixed;
+	bottom:2em;
+	right:2em;
+	z-index:10;
+	display:inline-block;
+}
+
+#rate div {
+	float:left;
+}
+
+#next-arrow {
+	display: flex;
+	width: 32px;
+	height: 52px;
+	background-size: contain;
+}
+
+#curved-arrow {
+  position: relative;
+  margin:22px 0;
+	width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-right: 9px solid #C1DEF1;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+}
+#curved-arrow:after {
+  content: "";
+  position: absolute;
+  border: 0 solid transparent;
+  border-top: 3px solid #C1DEF1;
+  border-radius: 20px 0 0 0;
+  top: -12px;
+  left: -9px;
+  width: 12px;
+  height: 12px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+#next-arrow:hover {
+	cursor:pointer;
 }
 
 #displayImage img {
@@ -32,17 +136,21 @@ body,html {
 	margin:auto;
 	z-index:5;
 }
-/*#displayImage {
-	display:none;
-}*/
+
+#displayImage img.default {
+  opacity: 0.25;
+}
+
+#displayImage img.portrait {
+	transform: rotate(270deg);
+}
 
 a, span.linklike {
 	text-decoration: none;
 	color: #00aed1;
 }
 
-a:hover, span.linklike:hover {
-	text-decoration: underline;
+#options > span:hover, #choose span:hover, .clickable:hover {
 	cursor:pointer;
 }
 
@@ -55,4 +163,8 @@ a:hover, span.linklike:hover {
 h1 {
 	font-weight: bold;
 	font-size: 1.5em;
+}
+
+#options h1 {
+	font-size: 1.25em;
 }

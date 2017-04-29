@@ -7,26 +7,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bars-1to10.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/jquery.barrating.min.js"></script>
     <script src="./js/main.js" type="text/javascript"></script>
   </head>
 
   <body>
-    <div id="interact">
-      <div id="title">
+    <div id="page-info">
+      <span id="title">
         <h1 id="message">pigPhotos!</h1>
-      </div>
-      <!-- <form id="auth">
-        <input type="submit" value="Get photos!" />
-      </form> -->
-      <div id="next">
-        <form id="next-photo">
-          <input type="submit" value="pig Up!" />
-        </form>
-      </div>
+      </span>
+      <span id="authorize">
+        <h1 class="clickable">Authorize</h1>
+      </span>
     </div>
     <div id="look">
-      <span id="displayImage"></span>
+      <span id="displayImage"><img class="default" src='./images/pigphotos.png'</span>
+    </div>
+    <div id="rate" class="hidden">
+      <div id="photo-info">
+        <span id="album-title"></span>
+      </div>
+      <select id="scorebox">
+        <option value=""></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+      </select>
+      <div id="next">
+        <a href="" title="Next photo"><span id="next-arrow"><span id="curved-arrow"></span></span></a>
+      </div>
     </div>
   </body>
 
